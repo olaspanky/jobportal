@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import{ navLinks } from '@/constants';
-import  { FaConfluence, FaRegListAlt, FaRegMinusSquare } from 'react-icons/fa';
+import Image from 'next/image';
+import { logo } from '@/assets';
 
 
 const Navbar = () => {
@@ -9,7 +10,8 @@ const Navbar = () => {
 
   return (
     <nav className='w-full flex p-5 justify-between m-3 items-center navbar'>
-  <FaConfluence size={30} alt= "hoobank" className='w-[124px] h-[32px]' />
+  
+  <Image src={logo}  alt= "hoobank" className='w-[124px] h-[32px]'/>
 
       <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
           {navLinks.map((nav, index)=> (
@@ -26,7 +28,7 @@ const Navbar = () => {
       <div className=' sm:hidden flex flex-1 justify-end items-center '>
            
 
-            <FaRegListAlt onClick={()=> setToggle((prev) => !prev)} />
+            <Image src={menu} onClick={()=> setToggle((prev) => !prev)} /> 
             
 
             <div className={`${toggle ? 'flex' : 'hidden' } 
