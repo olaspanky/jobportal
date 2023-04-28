@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import{ navLinks } from '@/constants';
 import Image from 'next/image';
-import { logo } from '@/assets';
+import { logo, menu } from '@/assets';
 
 
 const Navbar = () => {
