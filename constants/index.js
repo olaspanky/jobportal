@@ -5,10 +5,7 @@ export const navLinks = [
     id: "/",
     title: "Home",
   },
-  {
-    id: "dashboard",
-    title: "Dashboard",
-  },
+
   {
     id: "signup",
     title: "signup",
@@ -16,6 +13,18 @@ export const navLinks = [
   {
     id: "formapp",
     title: "form",
+  },
+  {
+    id: "payment",
+    title: "payment",
+  },
+  {
+    id: "candidate",
+    title: "job portal",
+  },
+  {
+    id: "employer",
+    title: "Employers Portal",
   },
 ];
 
@@ -71,28 +80,48 @@ export const jobs = [
  
 ];
 
-export const features = [
+export const jobportal = [
   {
-    id: "feature-1",
-    icon: star,
-    title: "Rewards",
-    content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
+    id:"8",
+    jobTitle:"Devops",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    category: "Devops",
+    location: "USA",
+    salary: "$3000",
+    start: " 03-05-2023",
+    Duration:"3months"
   },
   {
-    id: "feature-2",
-    icon: shield,
-    title: "100% Secured",
-    content:
-      "We take proactive steps make sure your information and transactions are secure.",
+    id:"8",
+    jobTitle:"Devops",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    category: "Devops",
+    location: "USA",
+    salary: "$3000",
+    start: " 03-05-2023",
+    Duration:"3months"
   },
   {
-    id: "feature-3",
-    icon: send,
-    title: "Balance Transfer",
-    content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+    id:"8",
+    jobTitle:"Devops",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    category: "Devops",
+    location: "USA",
+    salary: "$3000",
+    start: " 03-05-2023",
+    Duration:"3months"
   },
+  {
+    id:"8",
+    jobTitle:"Devops",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    category: "Devops",
+    location: "USA",
+    salary: "$3000",
+    start: " 03-05-2023",
+    Duration:"3months"
+  },
+
 ];
 
 export const feedback = [

@@ -14,7 +14,7 @@ const JobSpace = () => {
 
     <div className='grid grid-cols-1 md:grid-cols-12 gap-5'>
     <div className='col-span-4'>
-    <h1>Welcome to your Number 1 job Application site</h1>
+    <h1 className='p-3 text-lg first-letter:text-blue-700'>Welcome to your Number 1 job Application site</h1>
     </div>
     
     <div className='col-span-8 rounded-md w-full bg-white px-4 py-4 shadow-md transition transform duration-500 cursor-pointer m-3'>
