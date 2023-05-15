@@ -69,20 +69,20 @@ const Candidateprofile = () => {
     </div>
       
             <div className='grid grid-cols-12 lg:px-10 p-3 gap-1 w-full lg:w-[40%] '>
-            <div className='col-span-2 flex-end align-baseline'>Name</div>
-            <div className='col-span-10'><input className='rounded-sm w-full p-1 text-black' type='text'/> </div>
+            <div className='lg:col-span-2 text-[14px] lg:text-[24px] col-span-4 flex-end align-baseline'>Name</div>
+            <div className='lg:col-span-10 col-span-8'><input className='rounded-sm w-full p-1 text-black' type='text'/> </div>
             </div>
             <div className='grid grid-cols-12 lg:px-10 p-3 gap-1 w-full lg:w-[40%] '>
-            <div className='col-span-2 flex-end align-baseline'>Username</div>
-            <div className='col-span-10'><input className='rounded-sm w-full p-1 text-black' type='text'/> </div>
+            <div className='lg:col-span-2 text-[14px] lg:text-[24px] col-span-4 flex-end align-baseline'>Username</div>
+            <div className='lg:col-span-10 col-span-8'><input className='rounded-sm w-full p-1 text-black' type='text'/> </div>
             </div>
             <div className='grid grid-cols-12 lg:px-10 p-3 gap-1 w-full lg:w-[40%] '>
-            <div className='col-span-2 flex-end align-baseline'>Password</div>
-            <div className='col-span-10'><input className='rounded-sm w-full p-1 text-black' type='text'/> </div>
+            <div className='lg:col-span-2 text-[14px] lg:text-[24px] col-span-4 flex-end align-baseline'>Password</div>
+            <div className='lg:col-span-10 col-span-8'><input className='rounded-sm w-full p-1 text-black' type='text'/> </div>
             </div>
             <div className='grid grid-cols-12 lg:px-10 p-3 gap-1 w-full lg:w-[40%] '>
-            <div className='col-span-2 flex-end align-baseline'>Created On</div>
-            <div className='col-span-10'><input className='rounded-sm w-full p-1 text-black' type='text'/> </div>
+            <div className='lg:col-span-2 text-[14px] lg:text-[24px] col-span-4 flex-end align-baseline'>Created On</div>
+            <div className='lg:col-span-10 col-span-8'><input className='rounded-sm w-full p-1 text-black' type='text'/> </div>
             </div>
 
 
