@@ -15,10 +15,8 @@ const Cjobportal = ({jobTitle, description, category, location}) => {
 
 
   </div>
-
-    <div className='text-center p-5'>
-    <h1 className='font-extrabold text-lg '>Candidate Job portal</h1>
-    </div>
+ 
+   
 
  {jobportal.map((jobp) =>( 
   <div >

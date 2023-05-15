@@ -6,7 +6,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 function createstatus(job, date, status) {
     return { job, date, status };
@@ -21,7 +22,45 @@ function createstatus(job, date, status) {
     
   ];
 
+  
+    
+  
+
 const Candidateprofile = () => {
+
+  const handleClick=()=>{
+    const confirmMessage =" Are you sure you want to proceed"
+    const userConfirmed = window.confirm(confirmMessage);
+
+    if(userConfirmed){
+      console.log("user confirmed")
+    } else {
+      console.log(" cancelled")
+    }
+  }
+
+
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const router = useRouter();
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleConfirm = () => {
+    console.log("User confirmed!");
+    // Do something here, like navigate to another page
+    router.push("/")
+    setIsModalOpen(false);
+  };
+
+
+  const [toggle, setToggle] = useState(false)
   return (
     <div>
 
@@ -50,16 +89,47 @@ const Candidateprofile = () => {
 
             <div>
             <div className='grid grid-cols-3 gap-2'>
-            <div className='col-span-1 grid place-content-center p-2 text-black'><button className='bg-white w-[10em] rounded-md'>view/edit jobs</button></div>
-            <div className='col-span-1 grid place-content-center p-2 text-black'><button className='bg-white w-[10em] rounded-md'>view job status</button></div>
-            <div className='col-span-1 grid place-content-center p-2 text-black'><button className='bg-white w-[10em] rounded-md'>Close Account</button></div>
-            <div className='col-span-1 grid place-content-center p-2 text-black'><button className='bg-white w-[10em] rounded-md'>Inbox</button></div>
-            <div className='col-span-1 grid place-content-center p-2 text-black'><button className='bg-white w-[10em] rounded-md'>Job Board</button></div>
-            <div className='col-span-1 grid place-content-center p-2 text-black'><button className='bg-white w-[10em] rounded-md'>Job status</button></div>
+            <div className='col-span-1 grid place-content-center p-2 text-black'><button className='bg-white lg:w-[10em] rounded-md' onClick={()=> setToggle((prev) => !prev)} >view/edit jobs</button></div>
+            <div className='col-span-1 grid place-content-center p-2 text-black'><button className='bg-white lg:w-[10em] rounded-md' onClick={()=> setToggle((prev) => !prev)}  >view job status</button></div>
+            <div className='col-span-1 grid place-content-center p-2 text-black'><button className='bg-white lg:w-[10em] rounded-md' onClick={handleOpenModal}>Close Account</button></div>
+            <div className='col-span-1 grid place-content-center p-2 text-black'><button className='bg-white lg:w-[10em] rounded-md' onClick={()=> router.push("inbox")} >Inbox</button></div>
+            <div className='col-span-1 grid place-content-center p-2 text-black'><button className='bg-white lg:w-[10em] rounded-md'>Job Board</button></div>
+            <div className='col-span-1 grid place-content-center p-2 text-black'><button className='bg-white lg:w-[10em] rounded-md'>Job status</button></div>
             </div>
             </div>
 
-            <div className='m-3'>
+            <div>
+            
+            {isModalOpen && (
+              <div className="fixed z-10 inset-0 overflow-y-auto">
+                <div className="flex items-center justify-center min-h-screen">
+                  <div className="fixed bg-gray-500 bg-opacity-75"></div>
+                  <div className="bg-white rounded-lg overflow-hidden shadow-xl">
+                    <div className="px-6 py-4">
+                      <div className="text-lg font-medium text-black">Are you sure?</div>
+                      <p className="mt-2 text-black">This action cannot be undone.</p>
+                    </div>
+                    <div className="px-6 py-4 bg-gray-100 text-right">
+                      <button
+                        className="px-4 py-2 text-gray-600"
+                        onClick={handleCloseModal}
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        className="px-4 py-2 bg-blue-500 text-white ml-2"
+                        onClick={handleConfirm}
+                      >
+                        Confirm
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            </div>
+
+            <div className={` ${toggle ? 'flex' : 'hidden' } m-3 `}>
             <TableContainer component={Paper} >
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
